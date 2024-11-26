@@ -18,6 +18,19 @@
 
 	<!-- スタイルシート -->
 	<style>
+		@font-face {
+			font-family: 'Hiragino Kaku Gothic ProN';
+			src: local('Hiragino Kaku Gothic ProN'),
+				/* ローカルにインストールされている場合 */
+				url('./fonts/HiraKakuProN-W3.woff2') format('woff2'),
+				/* Web用フォーマット */
+				url('./fonts/HiraKakuProN-W3.woff') format('woff'),
+				url('./fonts/HiraKakuProN-W3.ttf') format('truetype');
+			/* TTF形式 */
+			font-weight: normal;
+			font-style: normal;
+		}
+
 		:root {
 			--wp--preset--spacing--10: 8px;
 			--wp--preset--spacing--20: 16px;
@@ -39,9 +52,10 @@
 		body {
 			background-color: var(--wp--preset--color--theme-1);
 			color: var(--wp--preset--color--theme-6);
-			font-family: var(--wp--preset--font-family--inter);
-			font-size: var(--wp--preset--font-size--medium);
-			font-weight: 400;
+			font-family: 'Hiragino Kaku Gothic ProN', sans-serif;
+			font-size: 1.2rem;
+			font-size: 3vw; 
+			font-weight: 100;
 			line-height: 1.6;
 			margin: 0;
 			padding: 0;
@@ -83,7 +97,15 @@
 			padding-left: var(--wp--preset--spacing--30);
 		}
 
-		.left-column,
+		.left-column {
+			flex: 1;
+			padding: 0 var(--wp--preset--spacing--30);
+			transform: translate(20%, 0%);
+			font-weight: 100;
+			/* 中央に寄せるための調整 */
+		}
+
+
 		.right-column {
 			flex: 1;
 			padding: 0 var(--wp--preset--spacing--30);
@@ -91,17 +113,20 @@
 
 		.left-column h1 {
 			font-size: var(--wp--preset--font-size--x-large);
-			margin-top: var(--wp--preset--spacing--40);
+			margin-top: var(--wp--preset--spacing--50);
+			font-weight: 500;
 		}
 
 		.left-column h2 {
 			font-size: var(--wp--preset--font-size--large);
-			margin-top: var(--wp--preset--spacing--40);
+			margin-top: var(--wp--preset--spacing--50);
+			font-weight: 500;
 		}
 
 		.left-column p {
 			font-size: var(--wp--preset--font-size--medium);
-			margin: var(--wp--preset--spacing--20) 0;
+			margin: var(--wp--preset--spacing--30) 0;
+			font-weight: 100;
 		}
 
 		.right-column {
@@ -111,6 +136,7 @@
 		.right-column h1 {
 			font-size: var(--wp--preset--font-size--x-large);
 			margin-top: var(--wp--preset--spacing--20);
+			font-weight: 550;
 		}
 
 		.right-column p {
@@ -161,6 +187,7 @@
 			text-decoration: underline;
 		}
 	</style>
+
 </head>
 
 <body>
