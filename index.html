@@ -124,6 +124,100 @@
 			padding-left: 1.5em;
 		}
 
+		.section-title {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-top: var(--wp--preset--spacing--50);
+			margin-bottom: var(--wp--preset--spacing--30);
+			font-size: var(--wp--preset--font-size--large);
+			font-weight: 500;
+			color: #c0392b;
+		}
+
+		.section-title::after {
+			content: "";
+			flex: 1;
+			height: 2px;
+			background-color: #c0392b;
+		}
+
+		.pub-item {
+			margin-bottom: var(--wp--preset--spacing--40);
+			padding-bottom: var(--wp--preset--spacing--30);
+			border-bottom: 1px solid #ddd;
+		}
+
+		.pub-item:last-child {
+			border-bottom: none;
+		}
+
+		.pub-title {
+			font-size: 1.25rem;
+			font-weight: 500;
+			margin: 0 0 8px 0;
+			line-height: 1.4;
+		}
+
+		.pub-authors {
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 0 0 8px 0;
+			font-weight: 100;
+		}
+
+		.pub-authors strong {
+			font-weight: 700;
+		}
+
+		.pub-venue {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 12px;
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 0;
+		}
+
+		.pub-venue a {
+			color: #c0392b;
+			text-decoration: none;
+		}
+
+		.pub-venue a:hover {
+			text-decoration: underline;
+		}
+
+		.pub-badge {
+			display: inline-block;
+			padding: 2px 12px;
+			border: 1px solid #999;
+			border-radius: 4px;
+			font-size: var(--wp--preset--font-size--small);
+			color: #333;
+		}
+
+		.award-item {
+			margin-bottom: var(--wp--preset--spacing--40);
+			padding-bottom: var(--wp--preset--spacing--30);
+			border-bottom: 1px solid #ddd;
+		}
+
+		.award-item:last-child {
+			border-bottom: none;
+		}
+
+		.award-name {
+			font-size: 1.25rem;
+			font-weight: 500;
+			margin: 0 0 8px 0;
+		}
+
+		.award-detail {
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 4px 0;
+			font-weight: 100;
+		}
+
 		.right-column h1 {
 			font-size: var(--wp--preset--font-size--x-large);
 			margin-top: var(--wp--preset--spacing--20);
@@ -198,30 +292,63 @@
 	<div class="main-content">
 		<div class="left-column">
 			<h1 id="about">About</h1>
-			<p><strong>学年</strong>: 学部4年</p>
-			<p><strong>専攻</strong>: 情報科学部 コンピュータシステム専攻</p>
+			<p><strong>学年</strong>: 修士１年</p>
 			<p><strong>大学</strong>: 愛知工業大学</p>
-			<p><strong>研究室</strong>: 徳久研究室</p>
+			<p><strong>研究室</strong>: 自然言語処理学研究室／徳久研究室</p>
 
 			<h2>Research Interests</h2>
-			<p>自然言語処理</p>
+			<p>自然言語処理 音声言語処理 マルチモーダル</p>
 
-			<h2 id="publications">Publications</h2>
-			<ul>
-				<li>市川淳貴, 徳久良子. 3Dアバターに適用可能な音声駆動型リアルタイム表情生成システム. 言語処理学会第32回年次大会 (NLP2026), C1-15, 2026年3月.</li>
-				<li>市川淳貴, 徳久良子. 音声情報と感情情報を用いたリアルタイム顔表情生成. 第20回言語処理若手シンポジウム (YANS2025), S2-P01, 2025年9月.</li>
-				<li>肥田京佳, 市川淳貴, 徳久良子. 「ふわふわ」「もったり」ってどう表現するの？ーエージェントとの豊かなコミュニケーションの実現に向けてー. 第19回言語処理若手シンポジウム (YANS2024), 2024年9月.</li>
-			</ul>
+			<h2 id="publications" class="section-title">Publications</h2>
 
-			<h2 id="awards">Awards</h2>
-			<ul>
-				<li>奨励賞, 第20回言語処理若手シンポジウム (YANS2025), 2025年9月.</li>
-				<li>デモ賞, 第20回言語処理若手シンポジウム (YANS2025), 2025年9月.</li>
-			</ul>
+			<div class="pub-item">
+				<p class="pub-title">3Dアバターに適用可能な音声駆動型リアルタイム表情生成システム</p>
+				<p class="pub-authors"><strong>市川 淳貴</strong>、徳久 良子</p>
+				<p class="pub-venue">
+					<a href="https://www.anlp.jp/nlp2026/">言語処理学会第32回年次大会（NLP 2026）</a>
+					/ C1-15
+					<span class="pub-badge">ポスター発表</span>
+				</p>
+			</div>
 
-			<h2 id="education">Education</h2>
+			<div class="pub-item">
+				<p class="pub-title">音声情報と感情情報を用いたリアルタイム顔表情生成</p>
+				<p class="pub-authors"><strong>市川 淳貴</strong>、徳久 良子</p>
+				<p class="pub-venue">
+					<a href="https://yans.anlp.jp/entry/yans2025">第20回言語処理若手シンポジウム（YANS 2025）</a>
+					/ S2-P01
+					<span class="pub-badge">ポスター発表</span>
+				</p>
+			</div>
+
+			<div class="pub-item">
+				<p class="pub-title">「ふわふわ」「もったり」ってどう表現するの？ーエージェントとの豊かなコミュニケーションの実現に向けてー</p>
+				<p class="pub-authors">肥田 京佳、<strong>市川 淳貴</strong>、徳久 良子</p>
+				<p class="pub-venue">
+					<a href="https://yans.anlp.jp/entry/yans2024">第19回言語処理若手シンポジウム（YANS 2024）</a>
+					<span class="pub-badge">ポスター発表</span>
+				</p>
+			</div>
+
+			<h2 id="awards" class="section-title">Awards</h2>
+
+			<div class="award-item">
+				<p class="award-name">第20回言語処理若手シンポジウム（YANS 2025）奨励賞</p>
+				<p class="award-detail"><strong>対象発表:</strong> 音声情報と感情情報を用いたリアルタイム顔表情生成</p>
+				<p class="award-detail"><strong>対象246件中24件（受賞率9.76%）</strong></p>
+			</div>
+
+			<div class="award-item">
+				<p class="award-name">第20回言語処理若手シンポジウム（YANS 2025）デモ賞</p>
+				<p class="award-detail"><strong>対象発表:</strong> 音声情報と感情情報を用いたリアルタイム顔表情生成</p>
+				<p class="award-detail"><strong>対象16件中2件（受賞率12.5%）</strong></p>
+			</div>
+
+			<h2 id="education" class="section-title">Education</h2>
 			<ul>
-				<li>2022年4月 - 入学 : 愛知工業大学 情報科学部 コンピュータシステム専攻</li>
+				<li>2026年4月 - 現在 : 愛知工業大学大学院 経営情報科学研究科</li>
+				<li>2022年4月 - 2026年3月 : 愛知工業大学 情報科学部 コンピュータシステム専攻</li>
+>>>>>>> 462f319 (Update profile: redesign publications/awards layout, add education history)
 			</ul>
 		</div>
 

@@ -114,6 +114,100 @@
 			padding-left: 1.5em;
 		}
 
+		.section-title {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-top: var(--wp--preset--spacing--50);
+			margin-bottom: var(--wp--preset--spacing--30);
+			font-size: var(--wp--preset--font-size--large);
+			font-weight: 500;
+			color: #c0392b;
+		}
+
+		.section-title::after {
+			content: "";
+			flex: 1;
+			height: 2px;
+			background-color: #c0392b;
+		}
+
+		.pub-item {
+			margin-bottom: var(--wp--preset--spacing--40);
+			padding-bottom: var(--wp--preset--spacing--30);
+			border-bottom: 1px solid #ddd;
+		}
+
+		.pub-item:last-child {
+			border-bottom: none;
+		}
+
+		.pub-title {
+			font-size: 1.25rem;
+			font-weight: 500;
+			margin: 0 0 8px 0;
+			line-height: 1.4;
+		}
+
+		.pub-authors {
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 0 0 8px 0;
+			font-weight: 100;
+		}
+
+		.pub-authors strong {
+			font-weight: 700;
+		}
+
+		.pub-venue {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 12px;
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 0;
+		}
+
+		.pub-venue a {
+			color: #c0392b;
+			text-decoration: none;
+		}
+
+		.pub-venue a:hover {
+			text-decoration: underline;
+		}
+
+		.pub-badge {
+			display: inline-block;
+			padding: 2px 12px;
+			border: 1px solid #999;
+			border-radius: 4px;
+			font-size: var(--wp--preset--font-size--small);
+			color: #333;
+		}
+
+		.award-item {
+			margin-bottom: var(--wp--preset--spacing--40);
+			padding-bottom: var(--wp--preset--spacing--30);
+			border-bottom: 1px solid #ddd;
+		}
+
+		.award-item:last-child {
+			border-bottom: none;
+		}
+
+		.award-name {
+			font-size: 1.25rem;
+			font-weight: 500;
+			margin: 0 0 8px 0;
+		}
+
+		.award-detail {
+			font-size: var(--wp--preset--font-size--medium);
+			margin: 4px 0;
+			font-weight: 100;
+		}
+
 		.right-column h1 {
 			font-size: var(--wp--preset--font-size--x-large);
 			margin-top: var(--wp--preset--spacing--20);
@@ -188,30 +282,62 @@
 	<div class="main-content">
 		<div class="left-column">
 			<h1 id="about">About</h1>
-			<p><strong>Year</strong>: B4 (Fourth-Year Undergraduate Student)</p>
-			<p><strong>Major</strong>: Computer Systems Course, Department of Computer Science</p>
+			<p><strong>Year</strong>: M1 (First-Year Master's Student)</p>
 			<p><strong>University</strong>: Aichi Institute of Technology</p>
-			<p><strong>Lab</strong>: Tokuhisa Lab</p>
+			<p><strong>Lab</strong>: Natural Language Processing Lab / Tokuhisa Lab</p>
 
 			<h2>Research Interests</h2>
-			<p>Natural Language Processing</p>
+			<p>Natural Language Processing, Speech Language Processing, Multimodal</p>
 
-			<h2 id="publications">Publications</h2>
-			<ul>
-				<li>Atsuki Ichikawa, Yoshiko Tokuhisa. A Speech-Driven Real-Time Facial Expression Generation System Applicable to 3D Avatars. The 32nd Annual Meeting of the Association for Natural Language Processing (NLP2026), C1-15, Mar. 2026.</li>
-				<li>Atsuki Ichikawa, Yoshiko Tokuhisa. Real-Time Facial Expression Generation Using Audio and Emotion Information. The 20th Young Researchers' Symposium on Natural Language Processing (YANS2025), S2-P01, Sep. 2025.</li>
-				<li>Kyoka Hida, Atsuki Ichikawa, Yoshiko Tokuhisa. How Do You Express "Fluffy" and "Thick"? — Toward Realizing Rich Communication with Agents. The 19th Young Researchers' Symposium on Natural Language Processing (YANS2024), Sep. 2024.</li>
-			</ul>
+			<h2 id="publications" class="section-title">Publications</h2>
 
-			<h2 id="awards">Awards</h2>
-			<ul>
-				<li>Encouragement Award, The 20th Young Researchers' Symposium on Natural Language Processing (YANS2025), Sep. 2025.</li>
-				<li>Demo Award, The 20th Young Researchers' Symposium on Natural Language Processing (YANS2025), Sep. 2025.</li>
-			</ul>
+			<div class="pub-item">
+				<p class="pub-title">A Speech-Driven Real-Time Facial Expression Generation System Applicable to 3D Avatars</p>
+				<p class="pub-authors"><strong>Atsuki Ichikawa</strong>, Yoshiko Tokuhisa</p>
+				<p class="pub-venue">
+					<a href="https://www.anlp.jp/nlp2026/">The 32nd Annual Meeting of the Association for Natural Language Processing (NLP 2026)</a>
+					/ C1-15
+					<span class="pub-badge">Poster</span>
+				</p>
+			</div>
 
-			<h2 id="education">Education</h2>
+			<div class="pub-item">
+				<p class="pub-title">Real-Time Facial Expression Generation Using Audio and Emotion Information</p>
+				<p class="pub-authors"><strong>Atsuki Ichikawa</strong>, Yoshiko Tokuhisa</p>
+				<p class="pub-venue">
+					<a href="https://yans.anlp.jp/entry/yans2025">The 20th Young Researchers' Symposium on Natural Language Processing (YANS 2025)</a>
+					/ S2-P01
+					<span class="pub-badge">Poster</span>
+				</p>
+			</div>
+
+			<div class="pub-item">
+				<p class="pub-title">How Do You Express "Fluffy" and "Thick"? — Toward Realizing Rich Communication with Agents</p>
+				<p class="pub-authors">Kyoka Hida, <strong>Atsuki Ichikawa</strong>, Yoshiko Tokuhisa</p>
+				<p class="pub-venue">
+					<a href="https://yans.anlp.jp/entry/yans2024">The 19th Young Researchers' Symposium on Natural Language Processing (YANS 2024)</a>
+					<span class="pub-badge">Poster</span>
+				</p>
+			</div>
+
+			<h2 id="awards" class="section-title">Awards</h2>
+
+			<div class="award-item">
+				<p class="award-name">Encouragement Award, The 20th Young Researchers' Symposium on Natural Language Processing (YANS 2025)</p>
+				<p class="award-detail"><strong>Paper:</strong> Real-Time Facial Expression Generation Using Audio and Emotion Information</p>
+				<p class="award-detail"><strong>24 out of 246 submissions (acceptance rate: 9.76%)</strong></p>
+			</div>
+
+			<div class="award-item">
+				<p class="award-name">Demo Award, The 20th Young Researchers' Symposium on Natural Language Processing (YANS 2025)</p>
+				<p class="award-detail"><strong>Paper:</strong> Real-Time Facial Expression Generation Using Audio and Emotion Information</p>
+				<p class="award-detail"><strong>2 out of 16 demos (acceptance rate: 12.5%)</strong></p>
+			</div>
+
+			<h2 id="education" class="section-title">Education</h2>
 			<ul>
-				<li>Apr. 2023 - Present: Aichi Institute of Technology, Department of Computer Science, Computer Systems Course</li>
+				<li>Apr. 2026 - Present: Aichi Institute of Technology, Graduate School of Business Administration and Computer Science</li>
+				<li>Apr. 2022 - Mar. 2026: Aichi Institute of Technology, Department of Computer Science, Computer Systems Course</li>
 			</ul>
 		</div>
 
